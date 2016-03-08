@@ -22,20 +22,44 @@ Person A and B can now talk encrypted back and forth with each other
 #Example
 
 ```javascript
+
+//TASK 1: Create a crypto identity for you
 CryptoIdentity.generateCurrentIdentity().then(function(identity){
   
-  //An identity is made of two things
-  identity.public //your public key
-  identity.private //your private key
+  //An identity is made of two things as json
+  //{
+  //   public: "KLAGSNGNALKGSASgs.....",
+  //   private: "asdkflajslkfasdjfkasdj...."
+  //}
   
-  //Verify a message comes from you
+  
+  
+  //TASK 2: Verify a message comes from you
+  
+  //1. On my side
   var message = "Hello World!"
   var signature = CryptoIdentity.createMessageSignature(identity,message)
-  CryptoIdentity.verifyMessageSignature(identity,message,signature) //True!
-  CryptoIdentity.verifyMessageSignature(identity,message,"Err...I don't have the signature") //False!
+  var safeIdentity = CryptoIdentity.getSafeIdentity(identity);
+  
+  //2. give the safeIdentity that represents you to someone else
+  
+  //3. Now if you ever sign a message, they can verify its from you with the signature and safe identity
+  CryptoIdentity.verifyMessageSignature(safeIdentity,message,signature) 
+  //True! This was my message
+  CryptoIdentity.verifyMessageSignature(safeIdentity,message,"Err...I don't have the signature") 
+  //False! This wasn't from me
 
+  //TASK 3: Encrypt a message 
+  //1. Encrypt the message with our identity
   var message = "Hello World!"
   var encryptedMessage = CryptoIdentity.encrypt(identity,message) // OMG SECRET!
-  CryptoIdentity.decrypt(identity,encryptedMessage) // "Hello World!"
+  
+  //2.Give encrypted message and safe identity to someon else
+  
+  //3. They can decrypt our message
+  CryptoIdentity.decrypt(safeIdentity,encryptedMessage) // "Hello World!"
 })
 ```
+
+#Don't Lose Your Keys!
+Remember, your public and private key is your identity, store them somewhere safe! LocalStore might be a nice start.
