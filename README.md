@@ -10,7 +10,7 @@ This library was made to give very basic functionality for people to cryptograph
 * **Let public communicate with you securely** - Encrypt a message with a public key and decrypt it with a private key
 * **Communicate with public with a message verified from you** - Create a message signature only possible to be created private key for a message to to be verified with a public key
 
-With these two simple methods, you can start talking with other people to setup conversations between crypoidentities
+With these two simple methods, you can start talking with other people to setup conversations between cryptoidentities
 
 1. Person A signs a message to public letting them know they are here!
 2. Person B encrypts a message including Person B's public key and sends to Person A
