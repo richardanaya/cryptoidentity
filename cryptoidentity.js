@@ -464,6 +464,12 @@ CryptoIdentity.decrypt = function(identity,encryptedMessage){
   return KEYUTIL.getKey(identity.private).decrypt(encryptedMessage);
 }
 
+CryptoIdentity.getSafeIdentity = function(identity){
+  return {
+    public:identity.public
+  }
+}
+
 var self = this;
 if(self.document === undefined) {
   var generateCurrentIdentity = CryptoIdentity.generateCurrentIdentity;

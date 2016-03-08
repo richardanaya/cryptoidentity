@@ -4,6 +4,12 @@ CryptoIdentity.generateCurrentIdentity().then(function(identity){
     assert.ok( identity.public != null);
   });
 
+  QUnit.test( "should be able to get safe identity", function( assert ) {
+    var safeIdentity = CryptoIdentity.getSafeIdentity(identity);
+    assert.ok( safeIdentity.private === undefined);
+    assert.ok( safeIdentity.public != null);
+  });
+
   QUnit.test( "should be able to verify messages", function( assert ) {
     var message = "Hello World!"
     var signature = CryptoIdentity.createMessageSignature(identity,message)
