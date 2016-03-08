@@ -4,7 +4,7 @@ A library for simple crypto identity in the browser
 
 #Cryptography As Identity
 
-This library was made to give very basic functionality for people to cryptographically verify each others identity and communicate with each other. It really only does four things, but they are powerful
+This library was created to let entities talk with each other securely using RSA cryptography under the covers. It really only does four things, but they are powerful
 
 * **Generate a cryptographic identity** 
 * **Create a safe cryptographic identity that can be given to other people** 
