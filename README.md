@@ -13,12 +13,12 @@ This library was created to let entities talk with each other securely using RSA
 
 With these two simple methods, you can start talking with other people to setup conversations between crypto identities
 
-1. Person A signs a message to public letting them know they are here with Person A's safe identity!
-2. Person B verifies Person A as the source of message with safe identity
-3. Person B encrypts Person B's safe identity and sends to Person A
-4. Person A encypts a message using Person B's safe identity and sends to Person B
+1. Jane signs a message to public letting them know they are here with Janes's safe identity!
+2. Bob verifies Jane as the source of message with Jane's safe identity
+3. Bob encrypts his safe identity and sends to Jane
+4. Jane encypts a message using Bob's safe identity and sends to him
 
-Person A and B can now talk encrypted back and forth with each other
+Jane and Bob can now talk encrypted back and forth with each other
 
 #Example
 
