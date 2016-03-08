@@ -9,7 +9,7 @@ This library was created to let entities talk with each other securely using RSA
 * **Generate a cryptographic identity** 
 * **Create a safe cryptographic identity that can be given to other people to represent you** 
 * **Let public communicate with you securely with the safe identity** 
-* **Verify messages come from you with safe identity** 
+* **Verify messages come from you with your safe identity** 
 
 With these two simple methods, you can start talking with other people to setup conversations between crypto identities
 
