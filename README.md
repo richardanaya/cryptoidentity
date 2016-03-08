@@ -59,6 +59,3 @@ npm install cryptoidentity
 ```
 <script src="https://cdn.rawgit.com/richardanaya/cryptoidentity/master/cryptoidentity.min.js"></script>
 ```
-
-#Don't Lose Your Keys!
-Remember, your public and private key is your identity, store them somewhere safe! LocalStore might be a nice start.
