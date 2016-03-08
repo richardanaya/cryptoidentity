@@ -23,7 +23,7 @@ Person A and B can now talk encrypted back and forth with each other
 
 ```javascript
 
-//TASK 1: Create a crypto identity for you
+//Task 1: Create a crypto identity for you
 CryptoIdentity.generateCurrentIdentity().then(function(identity){
   //An identity is made of two things as json
   //{
@@ -32,28 +32,23 @@ CryptoIdentity.generateCurrentIdentity().then(function(identity){
   //}
   //Note: Safe identities do not have private keys
   
-  //TASK 2: Verify a message comes from you
-  
+  //Task 2: Verify a message comes from you
   //1. On my side
   var message = "Hello World!"
   var signature = CryptoIdentity.createMessageSignature(identity,message)
   var safeIdentity = CryptoIdentity.getSafeIdentity(identity);
-  
   //2. give the safeIdentity that represents you to someone else
-  
   //3. Now if you ever sign a message, they can verify its from you with the signature and safe identity
   CryptoIdentity.verifyMessageSignature(safeIdentity,message,signature) 
   //True! This was my message
   CryptoIdentity.verifyMessageSignature(safeIdentity,message,"Err...I don't have the signature") 
   //False! This wasn't from me
 
-  //TASK 3: Encrypt a message 
+  //Task 3: Encrypt a message 
   //1. Encrypt the message with our identity
   var message = "Hello World!"
   var encryptedMessage = CryptoIdentity.encrypt(identity,message) // OMG SECRET!
-  
   //2.Give encrypted message and safe identity to someon else
-  
   //3. They can decrypt our message
   CryptoIdentity.decrypt(safeIdentity,encryptedMessage) // "Hello World!"
 })
