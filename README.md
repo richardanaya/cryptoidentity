@@ -14,8 +14,9 @@ This library was made to give very basic functionality for people to cryptograph
 With these two simple methods, you can start talking with other people to setup conversations between crypto identities
 
 1. Person A signs a message to public letting them know they are here!
-2. Person B encrypts a message including Person B's identity and sends to Person A
-3. Person A decrypts message with Person B's identity
+2. Person B verifies Person A as the source of message
+3. Person B encrypts a message including Person B's identity and sends to Person A
+4. Person A decrypts message with Person B's identity
 
 Person A and B can now talk encrypted back and forth with each other
 
