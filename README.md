@@ -21,6 +21,7 @@ Person A and B can now talk encrypted back and forth with each other
 
 #Example
 
+```javascript
 CryptoIdentity.generateCurrentIdentity().then(function(identity){
   
   //An identity is made of two things
@@ -37,3 +38,4 @@ CryptoIdentity.generateCurrentIdentity().then(function(identity){
   var encryptedMessage = CryptoIdentity.encrypt(identity,message) // OMG SECRET!
   CryptoIdentity.decrypt(identity,encryptedMessage) // "Hello World!"
 })
+```
