@@ -25,14 +25,12 @@ Person A and B can now talk encrypted back and forth with each other
 
 //TASK 1: Create a crypto identity for you
 CryptoIdentity.generateCurrentIdentity().then(function(identity){
-  
   //An identity is made of two things as json
   //{
   //   public: "KLAGSNGNALKGSASgs.....",
   //   private: "asdkflajslkfasdjfkasdj...."
   //}
-  
-  
+  //Note: Safe identities do not have private keys
   
   //TASK 2: Verify a message comes from you
   
