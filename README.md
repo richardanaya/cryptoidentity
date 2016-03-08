@@ -7,9 +7,9 @@ A library for simple crypto identity in the browser
 This library was created to let entities talk with each other securely using RSA cryptography under the covers. It really only does four things, but they are powerful
 
 * **Generate a cryptographic identity** 
-* **Create a safe cryptographic identity that can be given to other people** 
-* **Let public communicate with you securely with safe identity** 
-* **Communicate with public with messages verified with safe identity** 
+* **Create a safe cryptographic identity that can be given to other people to represent you** 
+* **Let public communicate with you securely with the safe identity** 
+* **Verify messages come from you with safe identity** 
 
 With these two simple methods, you can start talking with other people to setup conversations between crypto identities
 
