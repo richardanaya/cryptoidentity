@@ -26,8 +26,6 @@ Jane and Bob can now talk encrypted back and forth with each other
 
 //Task 1: Create a crypto identity for you
 CryptoIdentity.generateCurrentIdentity().then(function(identity){
-  //identity is just JSON that can be stringified
-
   //Task 2: Verify a message comes from you
   //1. On my side
   var message = "Hello World!"
