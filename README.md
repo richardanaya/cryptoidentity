@@ -11,7 +11,7 @@ This library was created to let entities talk with each other securely using RSA
 * **Let public communicate with you securely with the safe identity** 
 * **Verify messages come from you with your safe identity** 
 
-With these two simple methods, you can start talking with other people to setup conversations between crypto identities
+With these simple methods, you can start talking with other people to setup conversations between crypto identities
 
 1. Jane signs a message to the public along with her safe identity!
 2. Bob verifies Jane as the source of message using her safe identity
