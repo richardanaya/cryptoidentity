@@ -39,13 +39,13 @@ CryptoIdentity.generateCurrentIdentity().then(function(identity){
   //False! This wasn't from me
 
   //Task 3: Encrypt a message 
-  //1. Encrypt the message with our identity
+  //1. Someone can encrypt a message to me with my safe identity
   var message = "Hello World!"
-  var encryptedMessage = CryptoIdentity.encrypt(identity,message) 
+  var encryptedMessage = CryptoIdentity.encrypt(safeIdentity,message) 
   // OMG SECRET!
   //2.Give encrypted message and safeIdentity to someone else
-  //3. They can decrypt our message
-  CryptoIdentity.decrypt(safeIdentity,encryptedMessage) 
+  //3. Decrypt a message from someone else
+  CryptoIdentity.decrypt(identity,encryptedMessage) 
   // "Hello World!"
 })
 ```
